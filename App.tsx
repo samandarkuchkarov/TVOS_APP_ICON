@@ -9,6 +9,7 @@ import React, {useRef} from 'react';
 import type {PropsWithChildren} from 'react';
 import {
   findNodeHandle,
+  FocusDestination,
   SafeAreaView,
   ScrollView,
   StatusBar,
@@ -26,8 +27,8 @@ function App(): React.JSX.Element {
   const fullItems = Array.from(Array(10).keys());
   const {width} = useWindowDimensions();
   const ref = useRef<View>(null);
-  const [nextFocusDownId, setNextFocusDownId] = React.useState<number>();
-
+  const [nextFocusDown, setNextFocusDown] = React.useState<FocusDestination>();
+  console.log(nextFocusDown);
   return (
     <View style={styles.container}>
       <TVFocusGuideView
@@ -36,7 +37,9 @@ function App(): React.JSX.Element {
         {halfItems.map(i => {
           return (
             <TouchableOpacity
-              nextFocusDown={nextFocusDownId}
+              nextFocusDown={nextFocusDown}
+              nextFocusLeft={nextFocusDown}
+              nextFocusRight={nextFocusDown}
               key={i}
               style={{
                 width: width / 10 - 20,
@@ -53,10 +56,7 @@ function App(): React.JSX.Element {
             <TouchableOpacity
               key={i}
               ref={r => {
-                let id = findNodeHandle(r);
-                if (id) {
-                  setNextFocusDownId(id);
-                }
+                setNextFocusDown(r);
               }}
               style={{
                 width: width / 10 - 20,

@@ -36,7 +36,6 @@ function App(): React.JSX.Element {
         {halfItems.map(i => {
           return (
             <TouchableOpacity
-              //@ts-ignore
               nextFocusDown={nextFocusDownId}
               key={i}
               style={{

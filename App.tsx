@@ -26,9 +26,9 @@ function App(): React.JSX.Element {
   const halfItems = Array.from(Array(4).keys());
   const fullItems = Array.from(Array(10).keys());
   const {width} = useWindowDimensions();
-  const ref = useRef<View>(null);
   const [nextFocusDown, setNextFocusDown] = React.useState<FocusDestination>();
-  console.log(nextFocusDown);
+  const nextFocusDownRef = useRef<FocusDestination>(null);
+
   return (
     <View style={styles.container}>
       <TVFocusGuideView
@@ -37,9 +37,7 @@ function App(): React.JSX.Element {
         {halfItems.map(i => {
           return (
             <TouchableOpacity
-              nextFocusDown={nextFocusDown}
-              nextFocusLeft={nextFocusDown}
-              nextFocusRight={nextFocusDown}
+              nextFocusDown={i == 0 ? nextFocusDown : nextFocusDownRef.current}
               key={i}
               style={{
                 width: width / 10 - 20,
@@ -56,7 +54,10 @@ function App(): React.JSX.Element {
             <TouchableOpacity
               key={i}
               ref={r => {
-                setNextFocusDown(r);
+                if (i == 0 && r) {
+                  nextFocusDownRef.current = r;
+                  setNextFocusDown(r);
+                }
               }}
               style={{
                 width: width / 10 - 20,

@@ -12,6 +12,8 @@
 		39A2482E864E28D99400AA0F /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
 		761780ED2CA45674006654EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		FA941C5D2D7AB10F00930977 /* MyNativeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA941C5C2D7AB10F00930977 /* MyNativeView.swift */; };
+		FAF9C6A62D7AB1660098215F /* MyNativeViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF9C6A52D7AB1660098215F /* MyNativeViewManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		761780EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = TVTest/AppDelegate.swift; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = TVTest/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		FA941C5C2D7AB10F00930977 /* MyNativeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNativeView.swift; sourceTree = "<group>"; };
+		FAF9C6A52D7AB1660098215F /* MyNativeViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNativeViewManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +46,8 @@
 		13B07FAE1A68108700A75B9A /* TVTest */ = {
 			isa = PBXGroup;
 			children = (
+				FAF9C6A52D7AB1660098215F /* MyNativeViewManager.swift */,
+				FA941C5C2D7AB10F00930977 /* MyNativeView.swift */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				761780EC2CA45674006654EE /* AppDelegate.swift */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
@@ -247,6 +253,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				761780ED2CA45674006654EE /* AppDelegate.swift in Sources */,
+				FA941C5D2D7AB10F00930977 /* MyNativeView.swift in Sources */,
+				FAF9C6A62D7AB1660098215F /* MyNativeViewManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

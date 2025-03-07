@@ -6,18 +6,11 @@
  */
 
 import React, {useRef} from 'react';
-import type {PropsWithChildren} from 'react';
 import {
-  findNodeHandle,
   FocusDestination,
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
   StyleSheet,
-  Text,
   TouchableOpacity,
   TVFocusGuideView,
-  useColorScheme,
   useWindowDimensions,
   View,
 } from 'react-native';
